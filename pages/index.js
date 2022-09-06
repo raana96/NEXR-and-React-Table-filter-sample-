@@ -1,7 +1,6 @@
 import React from "react"
-import {useRouter} from "next/router"
 import { connect } from 'react-redux'
-import {getUsers} from "../includes/actions"
+import {getUsers} from "../_redux/_action/user-action"
 import Table from "../_components/Table"
 
 const columns = [
@@ -29,7 +28,7 @@ function Home(props){
   },[])
   return(
     <React.Fragment>
-      <h4>Wlecome</h4>
+      <div style={{height:50}}/>
       {props.user.users.length > 0?
         <Table columns={columns} data={props.user.users}/>
       :
